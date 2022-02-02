@@ -1,0 +1,210 @@
+.todo-list-container {
+	padding: 20px;
+	box-sizing: border-box;
+
+	.todo-list {
+		width: 600px;
+		height: 580px;
+		background-color: #f3e779;
+		padding: 20px;
+		box-sizing: border-box;
+		box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
+
+		&-heading {
+			font-family: 'Shadows Into Light', cursive;
+			font-size: 40px;
+			text-transform: uppercase;
+			text-align: center;
+			margin-bottom: 40px;
+		}
+
+		&-form {
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 40px;
+
+			&-input {
+				width: 80%;
+				font-family: 'IBM Plex Sans', sans-serif;
+				font-size: 18px;
+				font-weight: 200;
+				text-transform: uppercase;
+				background-color: #f3e779;
+				padding: 0 15px;
+				box-sizing: border-box;
+				border: none;
+				border-bottom: 1px solid #000;
+				outline: none;
+				transition: border-bottom 0.3s;
+
+				&::placeholder {
+					color: rgb(70, 70, 70);
+					text-transform: uppercase;
+				}
+			}
+
+			&-add-btn {
+				width: 15%;
+				font-size: 20px;
+				background-color: #f3e779;
+				padding: 5px 0;
+				border: 1px solid #000;
+				box-sizing: border-box;
+				cursor: pointer;
+				transition: all 0.3s;
+
+				&:hover {
+					background-color: #000;
+					color: #16bb00;
+				}
+
+				@media (max-width: 576px) {
+					font-size: 16px;
+				}
+			}
+		}
+
+		&-list {
+			max-height: 385px;
+			overflow-y: scroll;
+
+			&-item {
+				display: flex;
+				align-items: center;
+				margin: 20px 0;
+
+				&-left {
+					width: 85%;
+					display: flex;
+					align-items: center;
+
+					.todo-list-list-item-checkbox {
+						margin-right: 15px;
+						filter: grayscale(100%);
+						transform: scale(0.9);
+					}
+
+					.todo-list-list-item-text {
+						width: 100%;
+						font-family: 'IBM Plex Sans', sans-serif;
+						font-size: 18px;
+						text-transform: uppercase;
+						font-weight: 200;
+						padding-right: 25px;
+						box-sizing: border-box;
+
+						&.completed {
+							text-decoration: line-through;
+						}
+
+						&.hide {
+							display: none;
+						}
+					}
+
+					.todo-list-list-input-update {
+						width: 100%;
+						font-family: 'IBM Plex Sans', sans-serif;
+						font-size: 18px;
+						font-weight: 100;
+						text-transform: uppercase;
+						background-color: #f3e779;
+						padding-right: 25px;
+						box-sizing: border-box;
+						border: none;
+						outline: none;
+						display: none;
+
+						&.show {
+							display: block;
+						}
+					}
+				}
+
+				&-right {
+					width: 15%;
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+
+					.todo-list-list-item-update-btn {
+						width: 45%;
+						font-size: 16px;
+						background-color: #f3e779;
+						padding: 5px 0;
+						border: 1px solid #000;
+						box-sizing: border-box;
+						cursor: pointer;
+						transition: all 0.3s;
+
+						&:hover {
+							background-color: #000;
+						}
+
+						@media (max-width: 576px) {
+							font-size: 14px;
+						}
+					}
+
+					.update::before {
+						font-family: 'Font Awesome 5 Free';
+						font-weight: 900;
+						color: #000;
+						content: '\f303';
+						transition: all 0.3s;
+					}
+
+					.update:hover::before {
+						color: #3c60ff;
+					}
+
+					.confirm::before {
+						font-family: 'Font Awesome 5 Free';
+						font-weight: 900;
+						color: #000;
+						content: '\f00c';
+						transition: all 0.3s;
+					}
+
+					.confirm:hover::before {
+						color: #16bb00;
+					}
+
+					.todo-list-list-item-remove-btn {
+						width: 45%;
+						font-size: 16px;
+						background-color: #f3e779;
+						padding: 5px 0;
+						border: 1px solid #000;
+						box-sizing: border-box;
+						cursor: pointer;
+						transition: all 0.3s;
+
+						&::before {
+							font-family: 'Font Awesome 5 Free';
+							font-weight: 900;
+							content: '\f1f8';
+						}
+
+						&:hover {
+							background-color: #000;
+							color: orangered;
+						}
+
+						@media (max-width: 576px) {
+							font-size: 14px;
+						}
+					}
+				}
+			}
+
+			&-item:first-child {
+				margin-top: 0;
+			}
+
+			&-item:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
