@@ -130,31 +130,27 @@ table {
   border-spacing: 0;
 }
 
-.todo-list-container {
-  padding: 20px;
-  box-sizing: border-box;
-}
-.todo-list-container .todo-list {
+.todo-list {
   width: 600px;
-  height: 580px;
+  height: 560px;
   background-color: #f3e779;
   padding: 20px;
   box-sizing: border-box;
   box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.5);
 }
-.todo-list-container .todo-list-heading {
+.todo-list-heading {
   font-family: "Shadows Into Light", cursive;
   font-size: 40px;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 40px;
 }
-.todo-list-container .todo-list-form {
+.todo-list-form {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
 }
-.todo-list-container .todo-list-form-input {
+.todo-list-form-input {
   width: 80%;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 18px;
@@ -168,11 +164,11 @@ table {
   outline: none;
   transition: border-bottom 0.3s;
 }
-.todo-list-container .todo-list-form-input::placeholder {
+.todo-list-form-input::placeholder {
   color: #464646;
   text-transform: uppercase;
 }
-.todo-list-container .todo-list-form-add-btn {
+.todo-list-form-add-btn {
   width: 15%;
   font-size: 20px;
   background-color: #f3e779;
@@ -182,35 +178,35 @@ table {
   cursor: pointer;
   transition: all 0.3s;
 }
-.todo-list-container .todo-list-form-add-btn:hover {
+.todo-list-form-add-btn:hover {
   background-color: #000;
   color: #16bb00;
 }
 @media (max-width: 576px) {
-  .todo-list-container .todo-list-form-add-btn {
+  .todo-list-form-add-btn {
     font-size: 16px;
   }
 }
-.todo-list-container .todo-list-list {
-  max-height: 385px;
+.todo-list-list {
+  max-height: 365px;
   overflow-y: scroll;
 }
-.todo-list-container .todo-list-list-item {
+.todo-list-list-item {
   display: flex;
   align-items: center;
   margin: 20px 0;
 }
-.todo-list-container .todo-list-list-item-left {
+.todo-list-list-item-left {
   width: 85%;
   display: flex;
   align-items: center;
 }
-.todo-list-container .todo-list-list-item-left .todo-list-list-item-checkbox {
+.todo-list-list-item-left .todo-list-list-item-checkbox {
   margin-right: 15px;
   filter: grayscale(100%);
   transform: scale(0.9);
 }
-.todo-list-container .todo-list-list-item-left .todo-list-list-item-text {
+.todo-list-list-item-left .todo-list-list-item-text {
   width: 100%;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 18px;
@@ -219,13 +215,13 @@ table {
   padding-right: 25px;
   box-sizing: border-box;
 }
-.todo-list-container .todo-list-list-item-left .todo-list-list-item-text.completed {
+.todo-list-list-item-left .todo-list-list-item-text.completed {
   text-decoration: line-through;
 }
-.todo-list-container .todo-list-list-item-left .todo-list-list-item-text.hide {
+.todo-list-list-item-left .todo-list-list-item-text.hide {
   display: none;
 }
-.todo-list-container .todo-list-list-item-left .todo-list-list-input-update {
+.todo-list-list-item-left .todo-list-list-input-update {
   width: 100%;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 18px;
@@ -238,16 +234,16 @@ table {
   outline: none;
   display: none;
 }
-.todo-list-container .todo-list-list-item-left .todo-list-list-input-update.show {
+.todo-list-list-item-left .todo-list-list-input-update.show {
   display: block;
 }
-.todo-list-container .todo-list-list-item-right {
+.todo-list-list-item-right {
   width: 15%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.todo-list-container .todo-list-list-item-right .todo-list-list-item-update-btn {
+.todo-list-list-item-right .todo-list-list-item-update-btn {
   width: 45%;
   font-size: 16px;
   background-color: #f3e779;
@@ -257,35 +253,35 @@ table {
   cursor: pointer;
   transition: all 0.3s;
 }
-.todo-list-container .todo-list-list-item-right .todo-list-list-item-update-btn:hover {
+.todo-list-list-item-right .todo-list-list-item-update-btn:hover {
   background-color: #000;
 }
 @media (max-width: 576px) {
-  .todo-list-container .todo-list-list-item-right .todo-list-list-item-update-btn {
+  .todo-list-list-item-right .todo-list-list-item-update-btn {
     font-size: 14px;
   }
 }
-.todo-list-container .todo-list-list-item-right .update::before {
+.todo-list-list-item-right .update::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   color: #000;
   content: "\f303";
   transition: all 0.3s;
 }
-.todo-list-container .todo-list-list-item-right .update:hover::before {
+.todo-list-list-item-right .update:hover::before {
   color: #3c60ff;
 }
-.todo-list-container .todo-list-list-item-right .confirm::before {
+.todo-list-list-item-right .confirm::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   color: #000;
   content: "\f00c";
   transition: all 0.3s;
 }
-.todo-list-container .todo-list-list-item-right .confirm:hover::before {
+.todo-list-list-item-right .confirm:hover::before {
   color: #16bb00;
 }
-.todo-list-container .todo-list-list-item-right .todo-list-list-item-remove-btn {
+.todo-list-list-item-right .todo-list-list-item-remove-btn {
   width: 45%;
   font-size: 16px;
   background-color: #f3e779;
@@ -295,32 +291,35 @@ table {
   cursor: pointer;
   transition: all 0.3s;
 }
-.todo-list-container .todo-list-list-item-right .todo-list-list-item-remove-btn::before {
+.todo-list-list-item-right .todo-list-list-item-remove-btn::before {
   font-family: "Font Awesome 5 Free";
   font-weight: 900;
   content: "\f1f8";
 }
-.todo-list-container .todo-list-list-item-right .todo-list-list-item-remove-btn:hover {
+.todo-list-list-item-right .todo-list-list-item-remove-btn:hover {
   background-color: #000;
   color: orangered;
 }
 @media (max-width: 576px) {
-  .todo-list-container .todo-list-list-item-right .todo-list-list-item-remove-btn {
+  .todo-list-list-item-right .todo-list-list-item-remove-btn {
     font-size: 14px;
   }
 }
-.todo-list-container .todo-list-list-item:first-child {
+.todo-list-list-item:first-child {
   margin-top: 0;
 }
-.todo-list-container .todo-list-list-item:last-child {
+.todo-list-list-item:last-child {
   margin-bottom: 0;
 }
 
 .todo-list-container {
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=main.css.map */
