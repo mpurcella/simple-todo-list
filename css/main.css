@@ -203,7 +203,6 @@ table {
 .todo-list-list-item-left .todo-list-list-item-checkbox {
   margin-right: 15px;
   filter: grayscale(100%);
-  transform: scale(0.9);
 }
 .todo-list-list-item-left .todo-list-list-item-text {
   width: 100%;
