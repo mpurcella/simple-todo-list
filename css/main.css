@@ -165,7 +165,6 @@ table {
   transition: border-bottom 0.3s;
 }
 .todo-list-form-input::placeholder {
-  color: #464646;
   text-transform: uppercase;
 }
 .todo-list-form-add-btn {
@@ -212,6 +211,7 @@ table {
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 200;
+  line-height: normal;
   padding-right: 25px;
   box-sizing: border-box;
 }
@@ -225,10 +225,10 @@ table {
   width: 100%;
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 18px;
-  font-weight: 100;
+  font-weight: 200;
   text-transform: uppercase;
   background-color: #f3e779;
-  padding-right: 25px;
+  padding: 0 25px 0 0;
   box-sizing: border-box;
   border: none;
   outline: none;

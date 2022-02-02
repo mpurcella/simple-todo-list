@@ -23,7 +23,7 @@ let addTodo = () => {
 								type="text"
 								name=""
 								class="todo-list-list-input-update"
-								placeholder="Update Your Todo..."
+								placeholder="Update Your To-do..."
 							/>
 						</div>
 						<div class="todo-list-list-item-right">
