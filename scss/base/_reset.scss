@@ -101,8 +101,15 @@ section {
 	display: block;
 }
 body {
-	line-height: 1;
+	width: 100vw;
+	height: 100vh;
 	background-color: #23bed3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	box-sizing: border-box;
+	line-height: 1;
 }
 ol,
 ul {
